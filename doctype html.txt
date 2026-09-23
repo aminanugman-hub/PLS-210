@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FDI Diversification & Kazakhstan's Foreign-Policy Autonomy | PLS 210</title>
+<style>
+:root{
+  --bg:#07111f; --panel:#0d1b2d; --panel2:#11243b; --text:#eef5ff;
+  --muted:#a8b8cc; --accent:#72d6c9; --accent2:#ffd166; --line:#28405d;
+  --danger:#ff8c8c; --shadow:0 18px 60px rgba(0,0,0,.28);
+}
+*{box-sizing:border-box} html,body{margin:0;height:100%;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+body{overflow:hidden}
+.deck{height:100vh;display:flex;flex-direction:column}
+.top{height:62px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 28px;background:rgba(7,17,31,.94)}
+.brand{font-weight:800;letter-spacing:.02em}.brand span{color:var(--accent)}
+.counter{color:var(--muted);font-variant-numeric:tabular-nums}
+.progress{height:4px;background:#14263b}.bar{height:100%;width:0;background:var(--accent);transition:width .25s}
+main{flex:1;position:relative;overflow:hidden}
+.slide{position:absolute;inset:0;padding:48px 7vw 42px;display:none;overflow:auto}
+.slide.active{display:block;animation:in .28s ease-out}
+@keyframes in{from{opacity:.15;transform:translateX(18px)}to{opacity:1;transform:none}}
+.kicker{color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;margin-bottom:12px}
+h1{font-size:clamp(2.3rem,6vw,5.7rem);line-height:.96;margin:0 0 22px;max-width:1050px}
+h2{font-size:clamp(2rem,4vw,4rem);line-height:1.02;margin:0 0 26px}
+h3{margin:0 0 9px;font-size:1.15rem}
+.lead{font-size:clamp(1.15rem,2vw,1.55rem);line-height:1.5;color:#dbe8f6;max-width:920px}
+.small{font-size:.9rem;color:var(--muted);line-height:1.45}
+.grid{display:grid;gap:18px}.two{grid-template-columns:repeat(2,minmax(0,1fr))}.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{background:linear-gradient(145deg,var(--panel),#0a1728);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow)}
+.card p{line-height:1.5;color:#d5e1ef;margin:8px 0 0}.card ul{margin:10px 0 0;padding-left:20px;color:#d5e1ef;line-height:1.55}
+.bigq{font-size:clamp(1.55rem,3vw,2.55rem);line-height:1.2;border-left:4px solid var(--accent);padding:12px 0 12px 22px;margin:25px 0;max-width:1050px}
+.pill{display:inline-block;border:1px solid #36516f;background:#0e2034;border-radius:999px;padding:7px 11px;color:#cfe1f5;font-size:.85rem;margin:4px 5px 4px 0}
+.flow{display:flex;align-items:stretch;gap:10px;flex-wrap:wrap;margin:25px 0}.node{flex:1;min-width:170px;background:var(--panel2);border:1px solid var(--line);border-radius:16px;padding:18px}.arrow{align-self:center;color:var(--accent);font-size:1.8rem}
+.iv{border-color:#5e8bd0}.dv{border-color:#d5a84b}.mech{border-color:#55b59f}
+.source{display:flex;justify-content:space-between;gap:15px;align-items:flex-start}.source a{color:var(--accent);text-decoration:none}.source a:hover{text-decoration:underline}
+.note{border-left:3px solid var(--accent2);padding:10px 14px;background:#171c24;border-radius:8px;color:#e8e0c6;margin-top:18px}
+footer{height:58px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 24px;background:#081523;color:var(--muted);font-size:.85rem}
+button{border:1px solid var(--line);background:#0d1b2d;color:var(--text);border-radius:10px;padding:8px 12px;cursor:pointer}button:hover{border-color:#53718f}
+.controls{display:flex;gap:8px}.hint{opacity:.8}
+.badge{color:#07111f;background:var(--accent);padding:7px 10px;border-radius:9px;font-weight:900;display:inline-block}
+.quote{font-size:1.15rem;line-height:1.55;color:#e4edf8}
+.check li{margin-bottom:9px}.check li::marker{color:var(--accent)}
+.sources{font-size:.86rem;line-height:1.5;color:#bdccdc}.sources li{margin-bottom:8px}
+.refgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.ref{padding:14px;border:1px solid var(--line);border-radius:12px;background:#0a1727}.ref a{color:var(--accent)}
+@media(max-width:800px){.two,.three,.refgrid{grid-template-columns:1fr}.slide{padding:32px 24px 28px}.top{padding:0 16px}.arrow{display:none}.node{min-width:100%}}
+@media print{body{overflow:visible}.deck{height:auto}.slide{position:relative;display:block!important;min-height:100vh;page-break-after:always}.top,footer{display:none}}
+</style>
+</head>
+<body>
+<div class="deck">
+  <div class="top">
+    <div class="brand">PLS 210 <span>· Proposal 01</span></div>
+    <div class="counter" id="counter">1 / 14</div>
+  </div>
+  <div class="progress"><div class="bar" id="bar"></div></div>
+
+  <main id="slides">
+
+    <section class="slide active">
+      <div class="kicker">Research question · positioning · theory</div>
+      <h1>Can diversified foreign investment give Kazakhstan more room to maneuver?</h1>
+      <p class="lead">FDI-source diversification and Kazakhstan's foreign-policy autonomy toward Russia, 2000–2024.</p>
+      <div style="margin-top:34px"><span class="badge">Mafia boss · PLS 210</span></div>
+      <div class="note">Presentation target: about 8–10 minutes. Use ← / → or Space to navigate.</div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">01 · Research question</div>
+      <h2>What do I want to find out?</h2>
+      <div class="bigq">To what extent does diversification of foreign direct investment affect Kazakhstan's foreign-policy autonomy toward Russia from 2000 to 2024?</div>
+      <div class="grid two">
+        <div class="card"><h3>Population / case</h3><p>Kazakhstan as a single country case, observed over time.</p></div>
+        <div class="card"><h3>Context / time</h3><p>Kazakhstan's relations with Russia and other major investment partners, 2000–2024.</p></div>
+        <div class="card"><h3>IV · cause</h3><p><b>FDI diversification</b>: how distributed foreign direct investment is across source countries.</p></div>
+        <div class="card"><h3>DV · outcome</h3><p><b>Foreign-policy autonomy toward Russia</b>: the extent to which Kazakhstan can pursue positions not constrained by Russian preferences.</p></div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">02 · The puzzle</div>
+      <h2>Why is this worth asking?</h2>
+      <p class="lead">Kazakhstan has long pursued a multi-vector foreign policy: maintaining relationships with Russia while also developing ties with China, Europe, the United States and others.</p>
+      <div class="grid two" style="margin-top:22px">
+        <div class="card">
+          <h3>The tension</h3>
+          <p>Russia is a major economic and strategic partner. At the same time, Kazakhstan has incentives to preserve sovereignty and bargaining room.</p>
+        </div>
+        <div class="card">
+          <h3>The missing causal step</h3>
+          <p>Existing work often explains multi-vectorism through diplomacy, balancing and great-power competition. My question asks whether the <b>structure of foreign investment</b> itself can help explain variation in autonomy.</p>
+        </div>
+      </div>
+      <p class="small" style="margin-top:18px">This is a proposed causal relationship, not an assumption that diversification automatically produces autonomy.</p>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">03 · Epistemological positioning</div>
+      <h2>I work in the positivist tradition</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>What that means here</h3>
+          <p>I treat the relationship between investment diversification and foreign-policy autonomy as something that can be <b>conceptualised, measured and empirically tested</b>.</p>
+        </div>
+        <div class="card">
+          <h3>Why it fits my question</h3>
+          <p>My question asks “to what extent” one variable affects another. I therefore need observable indicators, systematic data and a testable hypothesis rather than only an interpretation of meanings.</p>
+        </div>
+      </div>
+      <div style="margin-top:24px">
+        <span class="pill">measurement</span><span class="pill">systematic evidence</span><span class="pill">causal explanation</span><span class="pill">hypothesis testing</span>
+      </div>
+      <div class="note">Important: choosing positivism does not mean other traditions are less legitimate. It means this particular question is framed around measurable relationships and causal testing.</div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">04 · Contribution</div>
+      <h2>What would this study add?</h2>
+      <div class="grid three">
+        <div class="card"><h3>1 · Connect two literatures</h3><p>Bring together research on Kazakhstan's multi-vector foreign policy and research on economic investment/diversification.</p></div>
+        <div class="card"><h3>2 · Test a mechanism</h3><p>Move beyond “Kazakhstan balances great powers” to test whether diversified investment can create economic room for manoeuvre.</p></div>
+        <div class="card"><h3>3 · Make autonomy measurable</h3><p>Translate the broad idea of foreign-policy autonomy into observable indicators that can be examined over time.</p></div>
+      </div>
+      <div class="note">My contribution is therefore empirical and explanatory: I am not claiming to invent multi-vectorism or soft balancing.</div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">05 · Literature review</div>
+      <h2>What does the literature already tell me?</h2>
+      <div class="grid two">
+        <div class="card source">
+          <div><h3>Nurgaliyeva (2016)</h3><p>Kazakhstan can use economic tools and outside partners to improve its bargaining position vis-à-vis Russia; diversification of energy routes reduced dependence on Russian routes in the cases examined.</p></div>
+          <a href="https://journals.sagepub.com/doi/10.1016/j.euras.2015.10.008" target="_blank">source ↗</a>
+        </div>
+        <div class="card source">
+          <div><h3>Vanderhill, Joireman & Tulepbayeva (2020)</h3><p>Explains Kazakhstan's multi-vectorism through omni-enmeshment and complex balancing, emphasizing relationships with multiple great powers and protection of autonomy.</p></div>
+          <a href="https://academic.oup.com/ia/article/96/4/975/5855019" target="_blank">source ↗</a>
+        </div>
+        <div class="card source">
+          <div><h3>Tjia (2022)</h3><p>Shows how Chinese connectivity projects can increase Kazakhstan's bargaining leverage and interact with economic diversification and multi-vectorism.</p></div>
+          <a href="https://doi.org/10.1080/01436597.2022.2027237" target="_blank">source ↗</a>
+        </div>
+        <div class="card source">
+          <div><h3>Bibi (2024)</h3><p>Highlights Kazakhstan's dependence on financial inflows and argues that FDI concentration in extractive activity can constrain economic diversification.</p></div>
+          <a href="https://doi.org/10.1016/j.resourpol.2024.104789" target="_blank">source ↗</a>
+        </div>
+        <div class="card source">
+          <div><h3>Silvan (2026)</h3><p>Recent analysis identifies economic dependence on Russia as one constraint on Kazakhstan's foreign-policy balancing, alongside domestic and geopolitical factors.</p></div>
+          <a href="https://fiia.fi/en/publication/the-limits-of-kazakhstans-foreign-policy-balancing" target="_blank">source ↗</a>
+        </div>
+        <div class="card">
+          <h3>Official context</h3><p>Kazakhstan's 2024 trade statistics show Russia remained a major trade partner, while China and European countries also played major roles in external trade.</p>
+          <a href="https://stat.gov.kz/en/industries/economy/foreign-market/publications/315588/" target="_blank" style="color:var(--accent)">Kazakhstan Bureau of National Statistics ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">06 · Research gap</div>
+      <h2>What do existing studies explain — and what is still open?</h2>
+      <div class="grid three">
+        <div class="card">
+          <h3>What we already know</h3>
+          <p>Existing studies explain Kazakhstan's multi-vectorism, economic soft balancing, relationships with multiple great powers, and the role of particular investment projects, sectors and routes.</p>
+        </div>
+        <div class="card">
+          <h3>The missing connection</h3>
+          <p>The literature I reviewed gives me different pieces of the puzzle, but I did not find a systematic test of whether <b>variation in FDI-source diversification</b> is associated with <b>variation in foreign-policy autonomy toward Russia</b>.</p>
+        </div>
+        <div class="card">
+          <h3>What my study proposes</h3>
+          <p>I would connect these two literatures by measuring FDI-source diversification and observable foreign-policy behaviour across 2000–2024, then testing whether they move in the predicted direction.</p>
+        </div>
+      </div>
+      <div class="flow" style="margin-top:24px">
+        <div class="node"><h3>Existing literature</h3><p>Economic diversification / multi-vectorism / bargaining</p></div>
+        <div class="arrow">→</div>
+        <div class="node mech"><h3>My proposed connection</h3><p>FDI-source diversification → reduced dependence → greater room for manoeuvre</p></div>
+        <div class="arrow">→</div>
+        <div class="node"><h3>Empirical test</h3><p>2000–2024 country-level data</p></div>
+      </div>
+      <div class="note">This is deliberately phrased as “the literature I reviewed,” not “nobody has ever studied this.” A broader literature search could modify the gap.</div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">07 · Positivist tradition: theory</div>
+      <h2>My theoretical idea: economic soft balancing</h2>
+      <p class="lead">The closest theoretical starting point is economic soft balancing: a less powerful state can use economic relationships with outside actors to improve its bargaining position relative to a stronger power.</p>
+      <div class="grid two" style="margin-top:22px">
+        <div class="card">
+          <h3>Existing insight</h3>
+          <p>Nurgaliyeva shows Kazakhstan using outside economic relationships and diversified routes to reduce vulnerability and improve its position vis-à-vis Russia.</p>
+        </div>
+        <div class="card">
+          <h3>My extension</h3>
+          <p>I ask whether the same logic can be tested at the broader level of <b>FDI-source diversification</b>, rather than only particular energy projects or bilateral initiatives.</p>
+        </div>
+      </div>
+      <div class="note">The theory gives me a reason why the IV should matter. The hypothesis turns that theoretical expectation into a testable prediction.</div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">08 · Causal mechanism</div>
+      <h2>The “because” behind the relationship</h2>
+      <div class="flow">
+        <div class="node iv"><h3>IV</h3><p>More diversified FDI</p><span class="small">fewer investment-source dependencies</span></div>
+        <div class="arrow">→</div>
+        <div class="node mech"><h3>Mechanism 1</h3><p>Less dependence on Russia</p><span class="small">more alternative economic partners</span></div>
+        <div class="arrow">→</div>
+        <div class="node mech"><h3>Mechanism 2</h3><p>Less vulnerability to Russian leverage</p><span class="small">greater bargaining room</span></div>
+        <div class="arrow">→</div>
+        <div class="node dv"><h3>DV</h3><p>Greater foreign-policy autonomy</p><span class="small">more room to act independently</span></div>
+      </div>
+      <p class="quote">The central claim is not “foreign investment makes Kazakhstan independent.” It is narrower: <b>diversification may create alternatives that reduce the costs of resisting or departing from Russian preferences.</b></p>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">09 · Hypothesis</div>
+      <h2>My testable prediction</h2>
+      <div class="bigq"><b>H1:</b> Greater diversification of foreign direct investment into Kazakhstan is associated with greater foreign-policy autonomy toward Russia.</div>
+      <div class="grid three">
+        <div class="card iv"><h3>IV · cause</h3><p>FDI diversification</p></div>
+        <div class="card mech"><h3>Mechanism</h3><p>Reduced economic dependence → reduced vulnerability → greater bargaining room</p></div>
+        <div class="card dv"><h3>DV · outcome</h3><p>Foreign-policy autonomy toward Russia</p></div>
+      </div>
+      <div class="note">Direction: positive. More diversification → more autonomy. If the IV were instead “Russian economic dependence,” the predicted relationship would be negative.</div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">10 · Scope & operationalisation</div>
+      <h2>How could I make the concepts testable?</h2>
+
+      <div class="grid two">
+        <div class="card iv">
+          <h3>IV · FDI-source diversification</h3>
+          <p>I need country-of-origin FDI data showing how much investment comes from Russia, China, EU member states, the United States and other source countries.</p>
+          <p>A concentration measure such as the <b>Herfindahl–Hirschman Index (HHI)</b> could summarise the distribution across source countries. Higher HHI = greater concentration = less diversification.</p>
+        </div>
+
+        <div class="card">
+          <h3>First data check</h3>
+          <p>Before choosing the measure, I need to verify whether comparable country-level FDI data are available throughout <b>2000–2024</b>.</p>
+          <p class="small"><b>Availability:</b> Can I obtain the source-country breakdown for enough years?<br>
+          <b>Consistency:</b> Were countries, definitions and reporting methods sufficiently comparable across the period?</p>
+        </div>
+      </div>
+
+      <div class="grid two" style="margin-top:18px">
+        <div class="card">
+          <h3>Flows vs. stocks</h3>
+          <ul>
+            <li><b>Annual FDI flows:</b> new investment entering Kazakhstan during a particular year.</li>
+            <li><b>FDI stocks:</b> accumulated investment already present at a particular point in time.</li>
+            <li>Flows capture the <b>composition of new investment</b>; stocks capture the <b>existing accumulated investment relationship</b>.</li>
+          </ul>
+          <p class="small">Because my mechanism is about economic dependence, I need to decide which measure better represents the theoretical concept. I may use one as the main measure and the other as a robustness check if the data allow it.</p>
+        </div>
+
+        <div class="card dv">
+          <h3>DV · Foreign-policy autonomy</h3>
+          <p>I need observable indicators of Kazakhstan's behaviour toward Russia. One possible starting point is documented cases where Kazakhstan's position <b>diverges from Russian preferences</b>.</p>
+          <p class="small"><b>Important:</b> divergence is not automatically the same as autonomy. A disagreement may reflect Kazakhstan's independent preference, another strategic consideration, or a different issue entirely. I therefore need theoretically justified and consistent coding rules.</p>
+        </div>
+      </div>
+
+      <div class="note">
+        <b>Open design decisions:</b> verify the FDI data first; choose flows, stocks, or both based on the theory and data quality; and define the autonomy coding rules before looking at the results.
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">11 · Logic of inquiry</div>
+      <h2>The design is deductive</h2>
+      <div class="flow">
+        <div class="node"><h3>Theory</h3><p>Economic relationships can alter dependence and bargaining power.</p></div>
+        <div class="arrow">→</div>
+        <div class="node"><h3>Mechanism</h3><p>Diversification creates alternatives and reduces vulnerability.</p></div>
+        <div class="arrow">→</div>
+        <div class="node"><h3>Hypothesis</h3><p>More FDI diversification → more autonomy.</p></div>
+        <div class="arrow">→</div>
+        <div class="node"><h3>Test</h3><p>Measure both variables over 2000–2024 and evaluate the predicted relationship.</p></div>
+      </div>
+      <p class="lead">I begin with a theoretical expectation, derive a hypothesis, and then use empirical evidence to evaluate it.</p>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">12 · AI transparency</div>
+      <h2>How I worked with AI</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>What AI helped with</h3>
+          <ul class="check">
+            <li>Brainstorming and narrowing the research question.</li>
+            <li>Separating IV, DV and causal mechanism.</li>
+            <li>Organising the literature into a coherent map.</li>
+            <li>Turning the proposal into a navigable web page.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>What remained mine</h3>
+          <ul class="check">
+            <li>I chose the substantive research direction.</li>
+            <li>I checked the sources used on this page.</li>
+            <li>I decided what argument I am willing to defend.</li>
+            <li>I need to be able to explain every concept and source myself.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="note">30-second spoken version: “I used AI as a learning and drafting partner. It helped me narrow the question, organise literature, clarify the IV, DV and mechanism, and build the webpage. I checked the sources and kept responsibility for the argument and research choices. Where the design is still uncertain, I have marked that uncertainty rather than asking AI to decide it for me.”</div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">13 · Ungraded reflection</div>
+      <h2>What working with AI helped me understand, and what I still don't understand about my research design</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>What AI helped me understand</h3>
+          <p>I started with the broad idea that “foreign investment affects foreign policy.” Working through the mechanism helped me see that the theoretically meaningful concept is not simply the amount of FDI, but whether investment sources are diversified enough to reduce dependence and create alternatives.</p>
+          <p>I also learned that operationalisation is not just choosing a number. I have to make sure the data actually match the concept I want to measure.</p>
+        </div>
+        <div class="card">
+          <h3>What I still don't understand</h3>
+          <p>I still need to determine whether annual FDI flows or accumulated FDI stocks better capture the dependence in my theory, and whether comparable country-level data are available for the whole period.</p>
+          <p>I also need to measure foreign-policy autonomy without simply treating every disagreement with Russia as proof of autonomy, and to separate FDI diversification from other sources of Russian leverage such as trade, transport and security ties.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="kicker">14 · End</div>
+      <h1>Thank you.</h1>
+      <p class="lead">Research question → positioning → literature → theory → mechanism → hypothesis</p>
+      <div class="card" style="max-width:850px;margin-top:30px">
+        <h3>Sources I can explain</h3>
+        <ol class="sources">
+          <li>Nurgaliyeva, L. (2016). <i>Kazakhstan's economic soft balancing policy vis-à-vis Russia</i>. Journal of Eurasian Studies 7(1), 92–105.</li>
+          <li>Vanderhill, R., Joireman, S. F., & Tulepbayeva, R. (2020). <i>Between the bear and the dragon</i>. International Affairs 96(4), 975–993.</li>
+          <li>Tjia, L. Y.-n. (2022). <i>Kazakhstan's leverage and economic diversification amid Chinese connectivity dreams</i>. Third World Quarterly 43(4), 797–822.</li>
+          <li>Bibi, S. (2024). <i>Oil revenues, FDI and balance of payment dynamics: The case of Kazakhstan</i>. Resources Policy 90, 104789.</li>
+          <li>Silvan, K. (2026). <i>The limits of Kazakhstan's foreign policy balancing</i>. Finnish Institute of International Affairs.</li>
+        </ol>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="hint">Keyboard: ← → / Space · Home / End · N = notes</div>
+    <div class="controls"><button onclick="prev()">←</button><button onclick="next()">→</button><button onclick="toggleNotes()">Notes</button></div>
+  </footer>
+</div>
+
+<script>
+let i=0;
+const slides=[...document.querySelectorAll('.slide')];
+const counter=document.getElementById('counter'), bar=document.getElementById('bar');
+
+function show(n){
+  i=Math.max(0,Math.min(slides.length-1,n));
+  slides.forEach((s,k)=>s.classList.toggle('active',k===i));
+  counter.textContent=(i+1)+' / '+slides.length;
+  bar.style.width=((i+1)/slides.length*100)+'%';
+  window.scrollTo(0,0);
+}
+function next(){show(i+1)} function prev(){show(i-1)}
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();next()}
+  if(e.key==='ArrowLeft'){e.preventDefault();prev()}
+  if(e.key==='Home'){e.preventDefault();show(0)}
+  if(e.key==='End'){e.preventDefault();show(slides.length-1)}
+  if(e.key.toLowerCase()==='n') toggleNotes();
+});
+function toggleNotes(){
+  document.body.classList.toggle('showNotes');
+  document.querySelectorAll('.note').forEach(x=>x.style.display=document.body.classList.contains('showNotes')?'block':'none');
+}
+show(0);
+document.querySelectorAll('.note').forEach(x=>x.style.display='none');
+</script>
+</body>
+</html>
